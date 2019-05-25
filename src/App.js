@@ -1,25 +1,27 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Alperen from './components/Alperen';
+
+import Header from './container/Header';
+
+const styles = {
+  backgroundImage: "url(https://www.harley-davidson.com/content/dam/h-d/images/motorcycles/my19/softail/fxdr-114/overview/dom/19-softail-fxdr114-hero.jpg)",
+  minHeight: "100vh",
+  backgroundSize: "cover",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header/>
+      <div style={styles}>
+        <Alperen/>
+      </div>
+    </Fragment>
   );
 }
 
